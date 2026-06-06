@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>NIMCET 2027 — Complete Preparation Roadmap</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --green:#27500A;--green-bg:#EAF3DE;--green-border:#C0DD97;
+  --blue:#0C447C;--blue-bg:#E6F1FB;--blue-border:#B5D4F4;
+  --amber:#633806;--amber-bg:#FAEEDA;--amber-border:#FAC775;
+  --purple:#3C3489;--purple-bg:#EEEDFE;--purple-border:#CECBF6;
+  --coral:#712B13;--coral-bg:#FAECE7;--coral-border:#F5C4B3;
+  --red:#791F1F;--red-bg:#FCEBEB;--red-border:#F7C1C1;
+  --gray:#444441;--gray-bg:#F1EFE8;--gray-border:#D3D1C7;
+  --teal:#085041;--teal-bg:#E1F5EE;--teal-border:#9FE1CB;
+  --text:#1a1a1a;--text-muted:#555;--text-light:#888;
+  --surface:#fff;--bg:#f8f7f4;--border:#e0ddd6;
+  --radius:10px;--radius-lg:16px;
+}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding:0}
+.hero{background:#0f1923;color:#fff;padding:3.5rem 2rem 3rem;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,255,0.012) 40px,rgba(255,255,255,0.012) 80px)}
+.hero-tag{display:inline-block;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:20px;font-size:12px;letter-spacing:0.08em;padding:5px 16px;margin-bottom:1.2rem;color:rgba(255,255,255,0.7);text-transform:uppercase}
+.hero h1{font-family:'DM Serif Display',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:400;line-height:1.15;margin-bottom:0.8rem;letter-spacing:-0.01em}
+.hero h1 span{color:#7FC7A0}
+.hero p{font-size:15px;color:rgba(255,255,255,0.55);max-width:520px;margin:0 auto 1.8rem;line-height:1.6}
+.hero-stats{display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap}
+.stat{text-align:center}
+.stat-num{font-family:'DM Serif Display',serif;font-size:2rem;color:#7FC7A0;line-height:1}
+.stat-label{font-size:11px;color:rgba(255,255,255,0.45);margin-top:3px;text-transform:uppercase;letter-spacing:0.06em}
+.container{max-width:860px;margin:0 auto;padding:2rem 1.5rem}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:2rem;justify-content:center}
+.leg{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--text-muted);background:var(--surface);border:0.5px solid var(--border);border-radius:20px;padding:4px 12px}
+.leg-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.phase-divider{text-align:center;margin:2rem 0 1.2rem;position:relative}
+.phase-divider::before{content:'';position:absolute;left:0;right:0;top:50%;height:1px;background:var(--border)}
+.phase-tag{position:relative;display:inline-block;background:var(--bg);padding:5px 18px;border-radius:20px;font-size:11px;font-weight:600;color:var(--text-muted);border:1px solid var(--border);text-transform:uppercase;letter-spacing:0.07em}
+.timeline{position:relative}
+.timeline::before{content:'';position:absolute;left:44px;top:0;bottom:0;width:1px;background:var(--border)}
+.month-block{display:grid;grid-template-columns:90px 1fr;gap:14px;margin-bottom:10px;align-items:start}
+.month-dot{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:10px 8px;min-height:72px;cursor:pointer;transition:all 0.18s;text-align:center;z-index:1}
+.month-dot:hover{border-color:#aaa;background:#fefefe}
+.month-dot.active{background:#0f1923;border-color:#0f1923}
+.month-dot.active .mname{color:#7FC7A0}
+.month-dot.active .myear{color:rgba(255,255,255,0.5)}
+.month-dot.active .micon{color:rgba(255,255,255,0.3)}
+.micon{font-size:11px;color:var(--text-light);margin-bottom:2px}
+.mname{font-size:20px;font-weight:600;color:var(--text);line-height:1}
+.myear{font-size:10px;color:var(--text-light);margin-top:2px;text-transform:uppercase;letter-spacing:0.05em}
+.pills-wrap{display:flex;flex-wrap:wrap;gap:6px;padding-top:8px;padding-bottom:4px}
+.pill{display:inline-flex;align-items:center;gap:5px;padding:5px 12px;border-radius:20px;font-size:12px;font-weight:500;cursor:pointer;border:1px solid transparent;line-height:1.3;transition:opacity 0.15s}
+.pill:hover{opacity:0.75}
+.pm{background:var(--green-bg);color:var(--green);border-color:var(--green-border)}
+.pa{background:var(--blue-bg);color:var(--blue);border-color:var(--blue-border)}
+.paa{background:var(--amber-bg);color:var(--amber);border-color:var(--amber-border)}
+.pc{background:var(--purple-bg);color:var(--purple);border-color:var(--purple-border)}
+.pe{background:var(--coral-bg);color:var(--coral);border-color:var(--coral-border)}
+.pmk{background:var(--red-bg);color:var(--red);border-color:var(--red-border)}
+.pr{background:var(--gray-bg);color:var(--gray);border-color:var(--gray-border)}
+.ps{background:var(--teal-bg);color:var(--teal);border-color:var(--teal-border)}
+.detail{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.4rem 1.5rem;margin-bottom:1.2rem;margin-left:104px;animation:slideIn 0.2s ease}
+@keyframes slideIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+.detail-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1rem}
+.detail-head h3{font-size:16px;font-weight:600;color:var(--text);line-height:1.3}
+.close-btn{background:none;border:none;cursor:pointer;font-size:18px;color:var(--text-light);padding:0 0 0 10px;line-height:1;flex-shrink:0}
+.close-btn:hover{color:var(--text)}
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-bottom:1rem}
+.topic-card{border-radius:var(--radius);padding:12px 14px;border:1px solid transparent}
+.tc-label{font-size:11px;font-weight:600;margin-bottom:6px;text-transform:uppercase;letter-spacing:0.05em}
+.topic-card ul{list-style:none;padding:0}
+.topic-card ul li{font-size:12px;color:var(--text-muted);padding:2px 0;line-height:1.45}
+.topic-card ul li::before{content:"→ ";opacity:0.5;font-size:11px}
+.tcm{background:var(--green-bg);border-color:var(--green-border)}.tcm .tc-label{color:var(--green)}
+.tca{background:var(--blue-bg);border-color:var(--blue-border)}.tca .tc-label{color:var(--blue)}
+.tcaa{background:var(--amber-bg);border-color:var(--amber-border)}.tcaa .tc-label{color:var(--amber)}
+.tcc{background:var(--purple-bg);border-color:var(--purple-border)}.tcc .tc-label{color:var(--purple)}
+.tce{background:var(--coral-bg);border-color:var(--coral-border)}.tce .tc-label{color:var(--coral)}
+.tcmk{background:var(--red-bg);border-color:var(--red-border)}.tcmk .tc-label{color:var(--red)}
+.tcr{background:var(--gray-bg);border-color:var(--gray-border)}.tcr .tc-label{color:var(--gray)}
+.tcs{background:var(--teal-bg);border-color:var(--teal-border)}.tcs .tc-label{color:var(--teal)}
+.week-box{background:#f8f7f4;border-radius:var(--radius);padding:10px 14px;font-size:12.5px;color:var(--text-muted);margin-bottom:8px;border-left:3px solid #ccc;border-radius:0}
+.week-box strong{color:var(--text);font-weight:600}
+.note-box{background:var(--amber-bg);border-radius:var(--radius);padding:10px 14px;font-size:12px;color:var(--amber);border:1px solid var(--amber-border)}
+.note-box::before{content:"Tip: ";font-weight:600}
+.tips-section{margin-top:2.5rem}
+.tips-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:1.2rem}
+.tip-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.2rem 1.4rem}
+.tip-card-head{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.tip-icon{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.tip-card h4{font-size:14px;font-weight:600;color:var(--text)}
+.tip-card p,.tip-card li{font-size:12.5px;color:var(--text-muted);line-height:1.6}
+.tip-card ul{padding-left:14px;margin-top:4px}
+.tip-card ul li{margin-bottom:3px}
+.resources-section{margin-top:2.5rem}
+.res-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:1.2rem}
+.res-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1rem 1.2rem}
+.res-subj{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;margin-bottom:6px;padding:3px 10px;border-radius:20px;display:inline-block}
+.res-card h4{font-size:13px;font-weight:600;color:var(--text);margin-bottom:6px}
+.res-card ul{list-style:none;padding:0}
+.res-card ul li{font-size:12px;color:var(--text-muted);padding:2px 0;line-height:1.4}
+.res-card ul li::before{content:"· ";font-weight:700;color:var(--text-light)}
+.section-title{font-family:'DM Serif Display',serif;font-size:22px;font-weight:400;color:var(--text);margin-bottom:4px}
+.section-sub{font-size:13px;color:var(--text-light);margin-bottom:0}
+.footer{text-align:center;padding:2.5rem 1rem;color:var(--text-light);font-size:12px;border-top:1px solid var(--border);margin-top:3rem}
+.footer strong{color:var(--text-muted)}
+@media(max-width:600px){
+  .timeline::before{left:36px}
+  .month-block{grid-template-columns:76px 1fr;gap:10px}
+  .month-dot{min-height:60px;padding:8px 6px}
+  .mname{font-size:17px}
+  .detail{margin-left:86px;padding:1rem}
+  .cards-grid{grid-template-columns:1fr}
+  .hero{padding:2.5rem 1rem 2rem}
+  .hero-stats{gap:1.5rem}
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-tag">Official Syllabus — 2026 Onwards</div>
+  <h1>NIMCET 2027<br><span>Complete Preparation Roadmap</span></h1>
+  <p>18-month month-by-month study plan covering all 4 subjects — built on the revised NIMCET syllabus</p>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num">18</div><div class="stat-label">Months</div></div>
+    <div class="stat"><div class="stat-num">120</div><div class="stat-label">Questions</div></div>
+    <div class="stat"><div class="stat-num">4</div><div class="stat-label">Subjects</div></div>
+    <div class="stat"><div class="stat-num">10+</div><div class="stat-label">Mock Tests</div></div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="legend" style="margin-top:1.8rem">
+    <div class="leg"><div class="leg-dot" style="background:#639922"></div> Basic Maths</div>
+    <div class="leg"><div class="leg-dot" style="background:#378ADD"></div> Advanced Maths</div>
+    <div class="leg"><div class="leg-dot" style="background:#BA7517"></div> Analytical Ability</div>
+    <div class="leg"><div class="leg-dot" style="background:#7F77DD"></div> Computer Awareness</div>
+    <div class="leg"><div class="leg-dot" style="background:#D85A30"></div> General English</div>
+    <div class="leg"><div class="leg-dot" style="background:#E24B4A"></div> Mock Tests</div>
+    <div class="leg"><div class="leg-dot" style="background:#888780"></div> Revision</div>
+    <div class="leg"><div class="leg-dot" style="background:#1D9E75"></div> Probability & Stats</div>
+  </div>
+
+  <p style="text-align:center;font-size:13px;color:var(--text-light);margin-bottom:1.8rem">Click any month to expand the full topic breakdown</p>
+
+  <div class="timeline" id="roadmap"></div>
+
+  <!-- Study Tips Section -->
+  <div class="tips-section">
+    <div class="section-title">Study tips — per subject</div>
+    <p class="section-sub">Proven strategies to maximise your score in each section</p>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="tip-card-head">
+          <div class="tip-icon" style="background:var(--green-bg)">📐</div>
+          <h4>Mathematics (50 Qs)</h4>
+        </div>
+        <ul>
+          <li>Make a 1-page formula sheet per chapter — review it weekly</li>
+          <li>Solve at least 30 problems per topic before moving on</li>
+          <li>Calculus is 15–18 marks alone — invest the most time here</li>
+          <li>Always re-derive formulas rather than just memorizing them</li>
+          <li>Solve previous NIMCET papers topic-wise, not year-wise</li>
+          <li>For weak students: Set Theory → Algebra → Trig in strict order</li>
+          <li>Target: 38–42 correct out of 50 for top NIT cutoffs</li>
+        </ul>
+      </div>
+      <div class="tip-card">
+        <div class="tip-card-head">
+          <div class="tip-icon" style="background:var(--amber-bg)">🧩</div>
+          <h4>Analytical Ability (40 Qs)</h4>
+        </div>
+        <ul>
+          <li>Practice daily — 40–45 min of timed AA is non-negotiable</li>
+          <li>Puzzles & seating: use diagrams, never solve in your head</li>
+          <li>Data Interpretation: read the question before the data</li>
+          <li>Syllogism: memorize the 4 standard conclusion patterns</li>
+          <li>Blood relations: always draw a tree diagram</li>
+          <li>Attempt all 40 — no negative marking in NIMCET</li>
+          <li>Target: 28–34 correct out of 40</li>
+        </ul>
+      </div>
+      <div class="tip-card">
+        <div class="tip-card-head">
+          <div class="tip-icon" style="background:var(--purple-bg)">💻</div>
+          <h4>Computer Awareness (20 Qs)</h4>
+        </div>
+        <ul>
+          <li>Binary conversions appear every year — practice daily drills</li>
+          <li>Boolean algebra: master AND/OR/NOT/NAND/NOR gates</li>
+          <li>2's complement is a guaranteed question — learn it cold</li>
+          <li>Make flashcards for hardware specs (RAM vs ROM vs Cache)</li>
+          <li>Internet + OS questions are mostly conceptual — easy marks</li>
+          <li>Revise CS in the last 30 days using only your own notes</li>
+          <li>Target: 14–17 correct out of 20</li>
+        </ul>
+      </div>
+      <div class="tip-card">
+        <div class="tip-card-head">
+          <div class="tip-icon" style="background:var(--coral-bg)">📖</div>
+          <h4>General English (10 Qs)</h4>
+        </div>
+        <ul>
+          <li>Read 1 editorial from The Hindu or Indian Express daily</li>
+          <li>Learn 10 new words per day with context sentences</li>
+          <li>Comprehension: answer from the passage, not from memory</li>
+          <li>Grammar: focus on tenses, articles, subject-verb agreement</li>
+          <li>Technical writing questions test formal register — practise it</li>
+          <li>10 Qs = easy 8–9 marks if done consistently — don't ignore</li>
+          <li>Target: 8–9 correct out of 10</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Resources Section -->
+  <div class="resources-section" style="margin-top:2.5rem">
+    <div class="section-title">Recommended resources</div>
+    <p class="section-sub">Best books and free resources for NIMCET 2027</p>
+    <div class="res-grid" style="margin-top:1.2rem">
+      <div class="res-card">
+        <span class="res-subj" style="background:var(--green-bg);color:var(--green)">Maths — Books</span>
+        <h4>Core textbooks</h4>
+        <ul>
+          <li>R.D. Sharma (Class 11 & 12) — for foundations</li>
+          <li>S.L. Loney — Trigonometry & Coordinate Geometry</li>
+          <li>I.A. Maron — Calculus (problems)</li>
+          <li>Arihant NIMCET — topic-wise solved papers</li>
+        </ul>
+      </div>
+      <div class="res-card">
+        <span class="res-subj" style="background:var(--amber-bg);color:var(--amber)">Analytical Ability</span>
+        <h4>Core books</h4>
+        <ul>
+          <li>R.S. Aggarwal — Verbal & Non-Verbal Reasoning</li>
+          <li>M.K. Pandey — Analytical Reasoning</li>
+          <li>Indiabix.com — free online practice sets</li>
+          <li>NIMCET previous papers (2015–2024)</li>
+        </ul>
+      </div>
+      <div class="res-card">
+        <span class="res-subj" style="background:var(--purple-bg);color:var(--purple)">Computer Awareness</span>
+        <h4>Core books</h4>
+        <ul>
+          <li>Arihant Computer Awareness — for competitive exams</li>
+          <li>Sanjay Saxena — A First Course in Computers</li>
+          <li>GeeksforGeeks (binary, Boolean algebra topics)</li>
+          <li>NIMCET CS PYQs (pattern is very consistent)</li>
+        </ul>
+      </div>
+      <div class="res-card">
+        <span class="res-subj" style="background:var(--coral-bg);color:var(--coral)">General English</span>
+        <h4>Core resources</h4>
+        <ul>
+          <li>Wren & Martin — High School English Grammar</li>
+          <li>Word Power Made Easy — Norman Lewis</li>
+          <li>The Hindu / Indian Express — daily reading</li>
+          <li>Grammarly blog — grammar rules quick reference</li>
+        </ul>
+      </div>
+      <div class="res-card">
+        <span class="res-subj" style="background:var(--red-bg);color:var(--red)">Mock Tests</span>
+        <h4>Free & paid platforms</h4>
+        <ul>
+          <li>Official NIMCET website — sample papers</li>
+          <li>Testbook.com — NIMCET mock series</li>
+          <li>Career Launcher — NIMCET test series</li>
+          <li>T.I.M.E. Institute — NIMCET coaching material</li>
+        </ul>
+      </div>
+      <div class="res-card">
+        <span class="res-subj" style="background:var(--teal-bg);color:var(--teal)">Online Free</span>
+        <h4>YouTube channels</h4>
+        <ul>
+          <li>Khan Academy — Maths & Probability (free)</li>
+          <li>Unacademy NIMCET — subject-wise lectures</li>
+          <li>3Blue1Brown — Calculus visual understanding</li>
+          <li>CareerRide — Computer Awareness videos</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Score Target Box -->
+  <div style="margin-top:2.5rem;background:#0f1923;border-radius:var(--radius-lg);padding:1.8rem 2rem;color:#fff">
+    <div style="font-family:'DM Serif Display',serif;font-size:20px;font-weight:400;margin-bottom:1rem;color:#7FC7A0">Score targets for top NITs</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px">
+      <div style="background:rgba(255,255,255,0.07);border-radius:var(--radius);padding:12px 16px">
+        <div style="font-size:11px;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px">NIT Trichy / Warangal / Surathkal</div>
+        <div style="font-size:22px;font-weight:600;color:#7FC7A0">130–145</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.35)">out of 180</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.07);border-radius:var(--radius);padding:12px 16px">
+        <div style="font-size:11px;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px">NIT Allahabad / Bhopal / Rourkela</div>
+        <div style="font-size:22px;font-weight:600;color:#7FC7A0">115–130</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.35)">out of 180</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.07);border-radius:var(--radius);padding:12px 16px">
+        <div style="font-size:11px;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px">Other participating NITs</div>
+        <div style="font-size:22px;font-weight:600;color:#7FC7A0">95–115</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.35)">out of 180</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.07);border-radius:var(--radius);padding:12px 16px">
+        <div style="font-size:11px;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px">Safe mock test target</div>
+        <div style="font-size:22px;font-weight:600;color:#FAC775">130+</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.35)">aim before April 2027</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <strong>NIMCET 2027 Preparation Roadmap</strong><br>
+  Based on the revised official syllabus (2026 onwards) · nimcet.admissions.nic.in<br>
+  <span style="margin-top:6px;display:block">Share freely with fellow aspirants · Good luck!</span>
+</div>
+
+<script>
+const months = [
+  {id:1,name:"Jun",year:"2026",phase:"Phase 1 — Maths Foundations",
+   pills:[{t:"Set Theory & Logic",c:"pm"},{t:"Basic Algebra",c:"pm"},{t:"Verbal Reasoning intro",c:"paa"}],
+   heading:"Set Theory, Logic & Basic Algebra",
+   tip:"Start slow. Even maths-strong students must nail logic — it appears in 5–7 questions directly.",
+   weekly:"Week 1–2: Set Theory + Logic. Week 3–4: Basic Algebra. Spend 5–6 hrs/day.",
+   note:"Not good at maths? Spend full Week 1 on sets and truth tables alone.",
+   cards:[
+     {cls:"tcm",label:"Set Theory",items:["Sets, Subsets, Union, Intersection","Cartesian Product, Cardinality","Venn Diagrams","Functions & Relations"]},
+     {cls:"tcm",label:"Logic",items:["Connectives (AND/OR/NOT/→)","Truth Tables","Tautology & Contradictions","Logical equivalence"]},
+     {cls:"tcm",label:"Basic Algebra",items:["BODMAS, algebraic identities","Indices & Logarithms","Linear equations basics","Introduction to quadratics"]},
+     {cls:"tcaa",label:"Analytical Ability",items:["Verbal reasoning: Analogies","Blood relations","Direction tests","30 mins/day only"]}
+   ]},
+  {id:2,name:"Jul",year:"2026",phase:null,
+   pills:[{t:"Algebra (mid-level)",c:"pm"},{t:"Progressions",c:"pm"},{t:"Coding-Decoding",c:"paa"}],
+   heading:"Algebra & Progressions",
+   tip:"Quadratic equations and progressions carry 6–8 marks in maths. Get these right.",
+   weekly:"Week 1: Quadratics. Week 2: AP & GP. Week 3: HP + sums of powers. Week 4: AA + maths revision.",
+   note:"Weak at maths? Practice at least 30 quadratic root problems before moving on.",
+   cards:[
+     {cls:"tcm",label:"Quadratic Equations",items:["Roots & coefficients (Vieta's)","Nature of roots (discriminant)","Symmetric functions of roots","Real-coefficient equations"]},
+     {cls:"tcm",label:"Progressions",items:["AP — nth term, Sn, AM","GP — nth term, Sn (finite/infinite), GM","HP & harmonic mean","Finite sums of natural numbers"]},
+     {cls:"tcm",label:"Indices & Logs",items:["Laws of indices","Change of base","Log equations","Exponential basics"]},
+     {cls:"tcaa",label:"Analytical Ability",items:["Coding-Decoding","Alphanumeric series","Seating arrangement intro","30–40 mins/day"]}
+   ]},
+  {id:3,name:"Aug",year:"2026",phase:"Phase 2 — Maths Core Topics",
+   pills:[{t:"Permutations & Combos",c:"pm"},{t:"Binomial Theorem",c:"pm"},{t:"Matrices & Determinants",c:"pm"},{t:"Puzzles",c:"paa"}],
+   heading:"Combinatorics, Matrices & Binomial Theorem",
+   tip:"P&C + Binomial + Matrices together account for 8–10 marks. These need repetition.",
+   weekly:"Week 1: P&C. Week 2: Binomial Theorem. Week 3: Matrices & Determinants. Week 4: Simultaneous equations + AA.",
+   note:"Matrices is pure calculation — make formula cards. Weak students: do 20 matrix problems daily.",
+   cards:[
+     {cls:"tcm",label:"Permutations & Combinations",items:["nPr, nCr formulas","Arrangements with repetition","Circular permutations","Selection with restrictions"]},
+     {cls:"tcm",label:"Binomial Theorem",items:["Binomial expansion (n∈N)","General term & middle term","Coefficient finding","Properties of binomial coefficients"]},
+     {cls:"tcm",label:"Matrices & Determinants",items:["Matrix types, operations","Determinant (2×2, 3×3)","Inverse of a matrix","Cramer's rule"]},
+     {cls:"tcaa",label:"Analytical Ability",items:["Puzzles & seating arrangements","Input-Output patterns","Syllogism intro","Daily 40 min AA practice"]}
+   ]},
+  {id:4,name:"Sep",year:"2026",phase:null,
+   pills:[{t:"Trigonometry (basics)",c:"pm"},{t:"Coordinate Geometry (basics)",c:"pm"},{t:"Syllogism",c:"paa"}],
+   heading:"Trigonometry & Coordinate Geometry Foundations",
+   tip:"Trig and CoGeom together can give 10–12 marks. Start with the building blocks.",
+   weekly:"Week 1–2: Trig basics + identities. Week 3: All line equations. Week 4: Pair of straight lines + AA.",
+   note:"Don't skip trig identities — they reappear in calculus. Make a one-page identity sheet.",
+   cards:[
+     {cls:"tcm",label:"Trigonometry Basics",items:["All 6 trig functions & graphs","Fundamental identities","Allied angles (0°/90°/180°/270°/360°)","Sin/cos/tan of standard angles"]},
+     {cls:"tcm",label:"Coordinate Geometry Basics",items:["Distance formula, Section formula","Midpoint & centroid","Slope, collinearity of points","Basic line equations"]},
+     {cls:"tcm",label:"Lines (all forms)",items:["Slope-intercept, point-slope","Two-point form, intercept form","Normal form, angle between lines","Pair of straight lines"]},
+     {cls:"tcaa",label:"Analytical Ability",items:["Syllogism — all/some/none","Statements & conclusions","Mirror images","Daily 45 min practice"]}
+   ]},
+  {id:5,name:"Oct",year:"2026",phase:null,
+   pills:[{t:"Advanced Trigonometry",c:"pa"},{t:"Conic Sections",c:"pa"},{t:"Data Interpretation",c:"paa"}],
+   heading:"Advanced Trigonometry & Conic Sections",
+   tip:"Conics and inverse trig are classic NIMCET targets. 8–10 marks here.",
+   weekly:"Week 1: Adv trig identities. Week 2: Inverse trig + trig equations. Week 3: Circle + Parabola. Week 4: Ellipse + Hyperbola.",
+   note:"Weak at conics? Focus on circles & parabola first — they appear most often in NIMCET.",
+   cards:[
+     {cls:"tca",label:"Advanced Trigonometry",items:["Compound & multiple angles","Sum-to-product, product-to-sum","Inverse trig functions (domain, range)","Principal values sin⁻¹, cos⁻¹, tan⁻¹","Trig equations & general solutions"]},
+     {cls:"tca",label:"Properties of Triangles",items:["Sine rule, Cosine rule","Tangent rule, Projection formulas","Heights & distances (practical)","Solution of triangles"]},
+     {cls:"tca",label:"Circles & Conics",items:["Circle: general & standard forms","Parabola: y²=4ax and variations","Ellipse: standard form, eccentricity","Hyperbola: standard form","Tangents & normals to all conics"]},
+     {cls:"tcaa",label:"Data Interpretation",items:["Bar charts, pie charts","Line graphs, tables","Data sufficiency intro","Daily 45 min practice"]}
+   ]},
+  {id:6,name:"Nov",year:"2026",phase:"Phase 3 — Probability, Stats & Start CS/English",
+   pills:[{t:"Probability",c:"ps"},{t:"Statistics",c:"ps"},{t:"Computer Awareness",c:"pc"},{t:"English",c:"pe"}],
+   heading:"Probability, Statistics & Starting CS + English",
+   tip:"Probability alone can give 5–7 marks. Start CS and English now — these need steady daily practice.",
+   weekly:"Week 1–2: Full probability (lots of problems). Week 3: Statistics. Week 4: Begin CS + English (1 hr each daily).",
+   note:"Bayes' Theorem appears every year. Don't skip it. For English: read 1 editorial daily.",
+   cards:[
+     {cls:"tcs",label:"Probability",items:["Basic concepts, sample space","Classical & empirical probability","Addition & multiplication theorems","Conditional probability","Bayes' Theorem (important!)","Independent vs dependent events"]},
+     {cls:"tcs",label:"Statistics",items:["Mean, Median, Mode","Mean deviation, Standard deviation","Variance, Moments","Frequency distributions"]},
+     {cls:"tcc",label:"Computer Basics",items:["Organization of computer","CPU structure & instructions","Input/Output devices","Computer memory types","Backup devices"]},
+     {cls:"tce",label:"General English",items:["Vocabulary: 10 words/day","Reading comprehension strategy","Grammar: tenses, articles","Sentence formation basics"]}
+   ]},
+  {id:7,name:"Dec",year:"2026",phase:null,
+   pills:[{t:"Limits & Continuity",c:"pa"},{t:"Differentiation",c:"pa"},{t:"CS Data Representation",c:"pc"},{t:"English",c:"pe"}],
+   heading:"Limits, Continuity & Differentiation",
+   tip:"Calculus is the biggest single topic in NIMCET maths. Invest heavily here.",
+   weekly:"Week 1: Limits (heavy). Week 2: Continuity + IVT. Week 3–4: Differentiation rules + CS data representation.",
+   note:"Weak at maths? Don't skip limits — 40% of calculus questions test limit evaluation.",
+   cards:[
+     {cls:"tca",label:"Limits",items:["Left & right limits, limits at infinity","Standard limits (sinx/x, (1+1/n)ⁿ)","Indeterminate forms","L'Hôpital's (concept only)"]},
+     {cls:"tca",label:"Continuity",items:["Continuity at a point","Intermediate Value Theorem","Differentiability condition","Derivatives of standard functions"]},
+     {cls:"tca",label:"Differentiation Rules",items:["Chain, product, quotient rules","Implicit & parametric differentiation","Higher order derivatives"]},
+     {cls:"tcc",label:"CS Data Representation",items:["Binary, Octal, Hex conversions","Binary arithmetic (add/sub/mul/div)","2's complement arithmetic","Floating point representation","Boolean algebra basics"]}
+   ]},
+  {id:8,name:"Jan",year:"2027",phase:null,
+   pills:[{t:"Applied Differentiation",c:"pa"},{t:"Integration",c:"pa"},{t:"CS Hardware & Software",c:"pc"},{t:"English",c:"pe"}],
+   heading:"Applied Differentiation & Introduction to Integration",
+   tip:"Tangents, maxima, minima — direct exam questions. Integration: master the three techniques.",
+   weekly:"Week 1: Tangents, normals, maxima-minima. Week 2: Rolle's + MVT. Week 3–4: Integration by substitution + parts.",
+   note:"Maxima-minima problems are frequently MCQ-friendly. Master the second derivative test.",
+   cards:[
+     {cls:"tca",label:"Applications of Differentiation",items:["Tangents & normals to curves","Increasing/decreasing functions","Maxima & minima (local & global)","Rolle's Theorem","Mean Value Theorem (Lagrange's)"]},
+     {cls:"tca",label:"Integration Techniques",items:["Integration by substitution","Integration by parts","Integration by partial fractions","Integrals of odd/even functions","Integrals of periodic functions"]},
+     {cls:"tcc",label:"CS Hardware & Software",items:["Input: keyboard, mouse, scanner","Output: monitor, printer, speakers","Storage: HDD, SSD, USB","OS: Windows, macOS, Linux","System vs Application software"]},
+     {cls:"tce",label:"English",items:["Word formation (prefix/suffix)","Synonyms & Antonyms","Reading comprehension drills","Grammar: conditionals, voice, narration"]}
+   ]},
+  {id:9,name:"Feb",year:"2027",phase:"Phase 4 — Complete Syllabus + AA Deep Dive",
+   pills:[{t:"Definite Integrals & Area",c:"pa"},{t:"Advanced AA",c:"paa"},{t:"Internet & CS",c:"pc"},{t:"English",c:"pe"}],
+   heading:"Definite Integrals, Area & Advanced Reasoning",
+   tip:"Definite integrals are the last major maths topic. AA gets intense — this is where ranks are made.",
+   weekly:"Week 1: Definite integrals (properties heavy). Week 2: Area problems. Week 3: Full AA blitz. Week 4: CS Internet + English.",
+   note:"At this point: 3 hrs maths + 1.5 hrs AA + 1 hr CS + 30 min English daily.",
+   cards:[
+     {cls:"tca",label:"Definite Integrals",items:["Properties of definite integrals","Definite integral as area","Newton-Leibniz formula","Integration of standard functions (definite)"]},
+     {cls:"tca",label:"Area Computations",items:["Area under a curve","Area between two curves","Mixed problems (geometry + integration)"]},
+     {cls:"tcaa",label:"Advanced Analytical Ability",items:["Critical thinking & arguments","Data visualization: mixed graphs","Numerical reasoning drills","Deductive & Inductive reasoning","Problem-solving under time pressure"]},
+     {cls:"tcc",label:"Internet & Online Security",items:["How the internet works","Web browsing concepts","Email: sending, receiving, managing","Online threats: phishing, malware","Basic cyber safety practices"]}
+   ]},
+  {id:10,name:"Mar",year:"2027",phase:"Phase 5 — Full Revision",
+   pills:[{t:"Maths Full Revision",c:"pr"},{t:"AA Full Revision",c:"paa"},{t:"CS Revision",c:"pc"},{t:"English Revision",c:"pe"}],
+   heading:"Complete Subject Revision — No New Topics",
+   tip:"No new topics this month. Only revision. Do topic-wise PYQs for each subject.",
+   weekly:"Treat each 4 days as a mini-sprint per subject. End the month with a timed full-syllabus self-test.",
+   note:"Make error logs — write every question you got wrong and why. Review them before each mock.",
+   cards:[
+     {cls:"tcr",label:"Maths Revision Priority",items:["Sets, Logic, Probability: 2 days","Algebra, P&C, Binomial: 3 days","Trig + Coordinate Geometry: 4 days","Calculus (all sub-topics): 5 days"]},
+     {cls:"tcaa",label:"AA Revision",items:["Redo all unsolved AA sets","Focus: puzzles, DI, reasoning","Time-bound practice (70 min for 40 Qs)","Identify and fix 2–3 weak areas"]},
+     {cls:"tcc",label:"CS Revision",items:["All formulas: binary conversions","Computer basics flashcard review","Hardware/Software: 1 full revision","Internet security: quick notes"]},
+     {cls:"tce",label:"English Revision",items:["Grammar rules: 1 page summary","Vocabulary: revise 150+ words","3 comprehension passages/day","Technical writing patterns"]}
+   ]},
+  {id:11,name:"Apr",year:"2027",phase:"Phase 6 — Mock Tests",
+   pills:[{t:"Mock Tests 1–6",c:"pmk"},{t:"Analysis & Weak-Area Fix",c:"pr"}],
+   heading:"Mock Tests: Full-Length Tests + Deep Analysis",
+   tip:"Take one full mock every 3–4 days. Spend equal time on analysis as on the test itself.",
+   weekly:"2 mocks/week. After each mock: 30 min error analysis, 1 hr focused revision of weakest topic.",
+   note:"NIMCET exam is likely in late May/June. Aim for 100+ score per mock by end of this month.",
+   cards:[
+     {cls:"tcmk",label:"Mock Schedule",items:["Mock 1: Day 3 (baseline)","Mock 2: Day 7","Mock 3: Day 12","Mock 4: Day 17","Mock 5: Day 22","Mock 6: Day 27"]},
+     {cls:"tcmk",label:"Post-Mock Analysis",items:["Record score per subject","List all wrong answers","Categorize: silly mistake / concept gap","Concept gaps → revisit notes same day","Attempt redo of wrong Qs next day"]},
+     {cls:"tcr",label:"Weak Area Sprints",items:["Identify lowest-scoring subject","Do targeted 2-day focused revision","Re-test that topic with 20 Qs","Confirm improvement before next mock"]},
+     {cls:"tcmk",label:"Time Management in Mock",items:["Maths: 50 Qs in ~55 min","AA: 40 Qs in ~40 min","CS: 20 Qs in ~15 min","English: 10 Qs in ~8 min","Skip & return strategy"]}
+   ]},
+  {id:12,name:"May",year:"2027",phase:"Phase 7 — Final Sprint",
+   pills:[{t:"Mock Tests 7–10",c:"pmk"},{t:"Formula Revision",c:"pr"},{t:"Exam Strategy",c:"pr"}],
+   heading:"Final Sprint — Grand Tests & Confidence Building",
+   tip:"Final month. No panic. Only timed tests, light revision of formulas, and staying sharp.",
+   weekly:"Week 1–2: Two full mocks + analysis. Week 3: 1 mock + formula revision. Week 4: Final mock + rest.",
+   note:"No negative marking in NIMCET — attempt all 120 questions. Average cutoff for top NITs: 130+/180.",
+   cards:[
+     {cls:"tcmk",label:"Final Mock Plan",items:["2 full mocks in Week 1","1 mock in Week 2","1 mock 1 week before exam","No mocks in last 2 days"]},
+     {cls:"tcr",label:"Last-Week Revision",items:["Formula sheet: 1 page maths","Logic & Sets: quick scan","Bayes' theorem re-read","CS: binary conversions practice","English: 1 passage/day only"]},
+     {cls:"tcmk",label:"Exam Strategy",items:["Attempt all 120 questions","No negative marking (attempt all)","Easiest subject first (your choice)","Mark & skip hard Qs, revisit","Stay calm: 2 hr exam, manage energy"]},
+     {cls:"tcr",label:"Day Before Exam",items:["Only light reading — no new topics","Sleep 7–8 hours mandatory","Carry hall ticket + ID proof","Reach venue 45 min early","Eat light on exam morning"]}
+   ]}
+];
+
+let active = null;
+
+function render(){
+  const el = document.getElementById("roadmap");
+  let html = "";
+  months.forEach((m,i)=>{
+    if(m.phase){
+      html+=`<div class="phase-divider"><span class="phase-tag">${m.phase}</span></div>`;
+    }
+    html+=`<div class="month-block">
+      <div class="month-dot ${active===m.id?'active':''}" onclick="toggle(${m.id})" title="Click to expand">
+        <div class="micon">▼</div>
+        <div class="mname">${m.name}</div>
+        <div class="myear">${m.year}</div>
+      </div>
+      <div class="pills-wrap">
+        ${m.pills.map(p=>`<span class="pill ${p.c}" onclick="toggle(${m.id})">${p.t}</span>`).join("")}
+      </div>
+    </div>`;
+    if(active===m.id){
+      const d=m;
+      html+=`<div class="detail" id="det-${m.id}">
+        <div class="detail-head">
+          <h3>${m.name} ${m.year} — ${d.heading}</h3>
+          <button class="close-btn" onclick="toggle(${m.id})" aria-label="Close">✕</button>
+        </div>
+        <div class="cards-grid">
+          ${d.cards.map(c=>`<div class="topic-card ${c.cls}"><div class="tc-label">${c.label}</div><ul>${c.items.map(it=>`<li>${it}</li>`).join("")}</ul></div>`).join("")}
+        </div>
+        <div class="week-box"><strong>Weekly plan:</strong> ${d.weekly}</div>
+        ${d.note?`<div class="note-box">${d.note}</div>`:""}
+      </div>`;
+    }
+    if(i<months.length-1){
+      html+=`<div style="display:grid;grid-template-columns:90px 1fr;gap:14px;margin-bottom:2px"><div style="display:flex;justify-content:center"><div style="width:1px;height:10px;background:var(--border)"></div></div><div></div></div>`;
+    }
+  });
+  el.innerHTML=html;
+  if(active){
+    const det=document.getElementById("det-"+active);
+    if(det) setTimeout(()=>det.scrollIntoView({behavior:"smooth",block:"nearest"}),50);
+  }
+}
+
+function toggle(id){
+  active = (active===id)?null:id;
+  render();
+}
+
+render();
+</script>
+</body>
+</html>
